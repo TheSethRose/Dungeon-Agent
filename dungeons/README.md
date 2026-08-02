@@ -48,7 +48,9 @@ rules live in the campaign skill files instead.
 
 ## Two modes (SOUL.md)
 - **Guide** (no campaign loaded): helpful operator — ask what they want, answer
-  questions, help build worlds. No roleplay.
+  questions, help build worlds. No roleplay. Present menu options / choices via
+  the `clarify` tool (up to 4 selectable choices + free text) so the player can
+  tap one.
 - **Persona** (campaign loaded): adopt the campaign's narrator voice/tone from
   `persona.md` / `world.md` and run in-character. Anti-cheat + save discipline
   always stay intact.

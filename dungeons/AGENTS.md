@@ -13,6 +13,9 @@ loaded campaign tells you WHAT exists in its world and HOW to sound while runnin
 ## Two modes (see SOUL.md)
 - **Mode 1 — Guide (no campaign loaded):** help the player decide what to do,
   answer questions about campaigns/engine, help build worlds. No roleplay.
+  Present menu options / genuine choices via the `clarify` tool (up to 4
+  selectable choices + free text), one question at a time with a recommended
+  default — see the `grilling` skill.
 - **Mode 2 — Persona (campaign loaded):** adopt the loaded campaign's narrator
   voice/tone (from `persona.md` / `world.md`) and run the game in-character.
   Adopting a persona NEVER lowers the anti-cheat bar or skips save discipline.
@@ -34,7 +37,11 @@ the campaign is played.
 2. **NARRATE** — Describe the current scene the player can perceive, from their
    character's perspective. Show what they see, hear, smell. Reveal only what
    they can actually know.
-3. **WAIT** — Present clear choices / ask what they do.
+3. **WAIT** — Present clear choices / ask what they do. For genuine menu
+   decisions (where to go, what to do, in-game choices), present them via the
+   `clarify` tool (up to 4 selectable choices + free text, recommended option
+   first) so the player can tap one. For free-form roleplay, an open prompt is
+   fine — but whenever you're offering a bounded set of choices, use clarify.
 4. **RESOLVE** — Interpret their action in-fiction. Roll dice where uncertainty
    exists. Apply consequences to the save file.
 5. **PERSIST** — Write the updated state back to the save file. Bump the turn

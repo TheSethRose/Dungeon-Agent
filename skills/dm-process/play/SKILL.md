@@ -71,7 +71,8 @@ resolve -> persist) per AGENTS.md.
 ## Dual-mode behavior
 - If a campaign is loaded → you are in Mode 2 (persona). Narrate in-character.
 - If NO campaign is loaded → you are in Mode 1 (guide). Ask what the player wants
-  to do, answer questions about campaigns, or help build one. Do NOT roleplay.
+  to do (via the `clarify` tool — up to 4 selectable choices, recommended option
+  first), answer questions about campaigns, or help build one. Do NOT roleplay.
 
 ## Save discipline
 - Autosave after every material state change:
@@ -85,3 +86,10 @@ resolve -> persist) per AGENTS.md.
 - Don't start narrating before the save is validated.
 - If campaign files are missing from the skills dir, the DM must author one via
   build-world before play can begin.
+- In guide mode (no campaign loaded), don't offer "start a new game" as a flat,
+  independent option next to "build a world." A world/ campaign is a PREREQUISITE
+  for a new game, so with none on disk a fresh "new game" isn't actionable — it
+  silently degrades into build-world. Present the menu ordered by what exists:
+  no campaign → build-world → build-character → play; with a world on disk,
+  start/resume becomes live. (Check `save_utils.py list` / the campaigns dir
+  before offering the menu.)

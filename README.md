@@ -17,8 +17,9 @@ campaign you load.
 - **Deterministic combat + schema-whitelist anti-cheat.** No invented powers,
   no self-awarded stats, no instant wins — enforced mechanically by validation.
 - **Dual-mode:** when no campaign is loaded the agent acts as a helpful
-  **guide** (asks what you want, answers questions, helps build); once a campaign
-  is loaded it **adopts that campaign's persona/voice/tone**.
+  **guide** (asks what you want via selectable `clarify` buttons, answers
+  questions, helps build); once a campaign is loaded it **adopts that campaign's
+  persona/voice/tone**.
 
 ## Install
 
@@ -36,9 +37,10 @@ dungeon-agent chat        # start a session
 ## Getting started
 
 - Say **"play"** or **"start a new game"** to launch — the agent will guide you.
-- Say **"create a new world"** / **"build a character"** / **"make a dungeon"** /
-  **"set up a situation"** to author content (it interviews you one question at
-  a time for genuine decisions, and researches canon for established IPs).
+- Say "create a new world" / "build a character" / "make a dungeon" /
+  "set up a situation" to author content (it interviews you one question at
+  a time via the `clarify` tool for genuine decisions, and researches canon for
+  established IPs).
 - `campaign-template` ships as a blank campaign + sample schema/world to copy.
 
 ## Project layout (what ships)
