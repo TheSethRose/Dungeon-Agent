@@ -1,0 +1,28 @@
+name: dungeon-agent
+version: 1.0.0
+description: "Interactive text-based dungeon-crawl campaign game engine. AGENTS.md is a universal Dungeon Master that runs ANY campaign (campaigns are installable skills with their own stats schema, world, and persona). Features save/load with session continuity, portable campaigns (content + progress travel together), deterministic combat helpers, and schema-whitelist anti-cheat. Dual-mode: acts as a helpful guide until a campaign is loaded, then adopts that campaign's persona/voice."
+hermes_requires: ">=0.12.0"
+author: "Seth Rose"
+license: "MIT"
+model_default: "deepseek/deepseek-v4-flash-0731"
+provider_default: "openrouter"
+
+# Required/optional env vars installers should provide for model access.
+env_requires:
+  - name: OPENROUTER_API_KEY
+    description: "OpenRouter API key (for model access via openrouter provider)"
+    required: false
+  - name: DEEPSEEK_API_KEY
+    description: "DeepSeek API key (fallback provider)"
+    required: false
+
+# What this distribution owns (replaced on `hermes profile update`).
+# Defaults already cover SOUL.md, config.yaml, skills/, cron/, mcp.json, distribution.yaml.
+# We additionally ship the engine dir as distribution-owned content.
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - skills/
+  - dungeons/
+  - cron/
+  - README.md

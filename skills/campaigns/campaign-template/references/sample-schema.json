@@ -1,0 +1,26 @@
+{
+  "campaign": "change-me",
+  "schema_version": 1,
+  "title": "Change Me",
+  "start_location": "start",
+  "stats": [
+    {"name": "hp",          "type": "int", "min": 0, "max": 999,      "start": 20},
+    {"name": "max_hp",      "type": "int", "min": 1, "max": 999,      "start": 20},
+    {"name": "atk",         "type": "int", "min": 1, "max": 99,       "start": 4},
+    {"name": "def",         "type": "int", "min": 0, "max": 99,       "start": 2},
+    {"name": "level",       "type": "int", "min": 1, "max": 50,       "start": 1},
+    {"name": "xp",          "type": "int", "min": 0, "max": 999999,   "start": 0},
+    {"name": "gold",        "type": "int", "min": 0, "max": 999999,   "start": 10},
+    {"name": "mana",        "type": "int", "min": 0, "max": 999,      "start": 5},
+    {"name": "max_mana",    "type": "int", "min": 0, "max": 999,      "start": 5}
+  ],
+  "derived": [
+    {"target": "max_hp",   "expr": "20 + (level - 1) * 4"},
+    {"target": "max_mana", "expr": "5 + (level - 1) * 2"}
+  ],
+  "level_curve": {"base": 50, "per_level": 50},
+  "items": [],
+  "abilities": [],
+  "rooms": [],
+  "win_condition": "Define what ends the game."
+}

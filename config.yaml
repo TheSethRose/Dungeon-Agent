@@ -1,0 +1,61 @@
+model:
+  default: deepseek/deepseek-v4-flash-0731
+  provider: openrouter
+  base_url: https://openrouter.ai/api/v1
+  api_mode: chat_completions
+fallback_providers: []
+agent:
+  max_turns: 60
+  gateway_timeout: 1800
+  api_max_retries: 3
+  tool_use_enforcement: auto
+  task_completion_guidance: true
+  environment_probe: true
+  environment_hint: ''
+  verify_on_stop: false
+  gateway_timeout_warning: 900
+  clarify_timeout: 600
+  gateway_notify_interval: 180
+  gateway_auto_continue_freshness: 3600
+  image_input_mode: auto
+  disabled_toolsets: []
+  verbose: false
+  reasoning_effort: medium
+terminal:
+  backend: local
+  cwd: /opt/data/workspace
+  timeout: 180
+  env_passthrough: []
+  shell_init_files: []
+  auto_source_bashrc: true
+  persistent_shell: true
+  lifetime_seconds: 300
+file_read_max_chars: 100000
+compression:
+  enabled: true
+  threshold: 0.5
+  target_ratio: 0.2
+  protect_last_n: 20
+  protect_first_n: 3
+prompt_caching:
+  cache_ttl: 5m
+display:
+  interface: cli
+  streaming: false
+  show_reasoning: true
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  memory_char_limit: 2600
+  user_char_limit: 1650
+  provider: local
+approvals:
+  mode: manual
+  timeout: 60
+security:
+  redact_secrets: true
+  tirith_enabled: false
+_onboarding_fresh: false
+onboarding:
+  seen:
+    tool_progress_prompt: true
